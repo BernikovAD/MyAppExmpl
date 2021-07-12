@@ -1,25 +1,34 @@
 public class Lesson5 {
     public static void main(String[] args) {
         int x = 1;
+        String month = "";
         switch (x) {
-            case 1,5:
-                System.out.println ("Switch: x = 1 или 5");
-                break;
-            case 3:
-                System.out.println ("Switch: x = 3");
-                break;
-            case 4:
-                System.out.println ("Switch: x = 4" );
+            case 1:
+                month = "Понедельник";
                 break;
             case 2:
-                System.out.println ("Switch: x = 2" );
+                month = "Вторник";
+                break;
+            case 3:
+                month = "Среда";
+                break;
+            case 4:
+                month = "Четверг";
+                break;
+            case 5:
+                month = "Пятница";
                 break;
             case 6:
-                System.out.println ("Switch: x = 6");
+                month = "Суббота";
+                break;
+            case 7:
+                month = "Воскресение";
                 break;
             default:
-                System.out.println ("Switch: x = " + x);
+                System.out.println ("Такого дня недели не существует");
         }
+        System.out.println ("Сегодня у нас " + month);
+
         if (x == 1) {
             System.out.println ("IF: x=1");
         } else if (x == 2) {
