@@ -15,7 +15,7 @@ public class Lesson7 {
         do {
             набор_операторов;
             while (условие);*/
-        int x= 10;
+/*        int x= 10;
         while(x<5){
             ++x;
             System.out.println ("x = " + x);
@@ -25,9 +25,9 @@ public class Lesson7 {
             x++;
         }while(x<5);
 
-/*        Массивы
+*//*        Массивы
         тип_данных[] имя_массива = new тип_данных[размер_массива];
-        Двумерные массивы*/
+        Двумерные массивы*//*
         int[][] table = new int[10][20];
 
         int num1 = 10, num2 = 12, num3 = 5;
@@ -52,7 +52,7 @@ public class Lesson7 {
         for (int i = 0; i < arr1.length; i++) {
             arr1[i] =1+(int)(Math.random ()+11);
         }
-        System.out.println (Arrays.toString (arr1));
+        System.out.println (Arrays.toString (arr1));*/
 
 /*        Задать целочисленный массив, состоящий из элементов 0 и 1.
         Например: [ 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 ]. С помощью цикла и условия заменить 0 на 1, 1 на 0;*/
