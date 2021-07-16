@@ -32,16 +32,24 @@ public class Lesson8 {
         }
         /*Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое),
         и с помощью цикла(-ов) заполнить его диагональные элементы единицами;*/
-        int[][] array = new int[3][3];
+        int[][] array = new int[5][5];
+        int x= 100;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length; j++) {
-                array[i][j] = 5;
-                if(i == j) {
+                array[i][j] = x--;
+/*                if(i == j) {
                     array[i][j] = 1;
-                }
+                }*/
                 System.out.print (array[i][j] + " ");
             }
             System.out.println ();
+        }
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                Arrays.stream(array[i]).sorted ();
+
+            }
+
         }
 
         /*Создать  двумерный целочисленный массив 7 на 8,
