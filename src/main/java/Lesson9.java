@@ -16,6 +16,7 @@ public class Lesson9 {
         System.out.println ("результат метода");
         //Вызываем метод вычесть из суммы максимальное и минимальное число
         System.out.println ("результат метода");
+        //sumMinusMaxMin (mass);
 
  /*      Дан двумерный целочисленный массив m * n
         (где m — количество строк, а n — количество элементов в строке).
@@ -42,4 +43,28 @@ public class Lesson9 {
     //Метод который считаем сумму всех элементов массива
     //Метод среднее арифметическое
     //Метод сумма минус макс и мин
+    public static int sum(int[][] array){
+        int sum = 0;
+
+        return sum;
+    }
+    public static int sumMinusMaxMin(int[][] array){
+        int max = array[0][0];
+        int min = array[0][0];
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                if(max > array[i][j]) max = array[i][j];
+
+            }
+        }
+        int result = 0;
+        result = sum(array) - max - min;
+        return result;
+    }
+    //Дан массив m * n. Вывести в консоль ровными столбиками
+    // 1   2   3
+    // 11  12  13
+    // 111 112 113
+
+
 }
