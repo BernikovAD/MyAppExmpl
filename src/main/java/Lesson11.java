@@ -1,3 +1,5 @@
+import OOP.Cat;
+
 import java.util.Scanner;
 
 public class Lesson11 {
@@ -63,7 +65,12 @@ public class Lesson11 {
             if (field[x][y] == DOT_EMPTY) {
                 field[x][y] = DOT_USER;
                 printField ();
-                playPC ();
+                if (evaluate (field) == 1) {
+                    System.out.println ("Вы выиграли!");
+                } else if (evaluate (field) == 0) {
+                    System.out.println ("Ход компьютера");
+                    playPC ();
+                }
             } else {
                 System.out.println ("Данная клетка занята");
                 playUser ();
@@ -86,9 +93,46 @@ public class Lesson11 {
         if (field[x][y] == DOT_EMPTY) {
             field[x][y] = DOT_PC;
             printField ();
-            playUser ();
+            if (evaluate (field) == -1) {
+                System.out.println ("Вы проиграли!");
+            } else if (evaluate (field) == 0) {
+                playUser ();
+            }
         } else {
             playPC ();
         }
     }
+
+    //Метод проверки 3 символов,вызывается из метода проверки выигрыша
+    static boolean equals3(char a, char b, char c) {
+        return (a == b) && (b == c) && (a != DOT_EMPTY);
+    }
+
+    static int evaluate(char[][] field) {
+        // Проверка строк на победу
+        for (int i = 0; i < SIZE; i++)
+            if (equals3 (field[i][0], field[i][1], field[i][2])) {
+                if (field[i][0] == DOT_USER) return 1;
+                else if (field[i][0] == DOT_PC) return -1;
+            }
+        // Проверка столбцов для победы
+        for (int col = 0; col < SIZE; col++) {
+            if (equals3 (field[0][col], field[1][col], field[2][col])) {
+                if (field[0][col] == DOT_USER) return 1;
+                else if (field[0][col] == DOT_PC) return -1;
+            }
+        }
+        // Проверка диагоналей на победу
+        if (equals3 (field[0][0], field[1][1], field[2][2])) {
+            if (field[0][0] == DOT_USER) return 1;
+            else if (field[0][0] == DOT_PC) return -1;
+        }
+        if (equals3 (field[0][2], field[1][1], field[2][0])) {
+            if (field[0][2] == DOT_USER) return 1;
+            else if (field[0][2] == DOT_PC) return -1;
+        }
+        // Иначе, если ни один из них не выиграл, вернуть 0
+        return 0;
+    }
+
 }
