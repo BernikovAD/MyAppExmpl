@@ -3,13 +3,13 @@ import OOP.Cat;
 import java.util.Scanner;
 
 public class Lesson11 {
-    public static char[][] field;
-    public static final int SIZE = 3;
-    public static final char DOT_USER = 'X';
-    public static final char DOT_PC = 'O';
-    public static final char DOT_EMPTY = '.';
-    public static Scanner scanner = new Scanner (System.in);
-    public static int x, y;
+    private static char[][] field;
+    private static final int SIZE = 3;
+    private static final char DOT_USER = 'X';
+    private static final char DOT_PC = 'O';
+    private static final char DOT_EMPTY = '.';
+    private static Scanner scanner = new Scanner (System.in);
+    private static int x, y;
 
     public static void main(String[] args) {
         System.out.println ("Игра в крестики нолики \nВы ходите крестиками");

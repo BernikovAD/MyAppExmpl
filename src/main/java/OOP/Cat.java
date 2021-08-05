@@ -3,6 +3,7 @@ package OOP;
 import java.util.Objects;
 
 public class Cat {
+
     String name;
     int age;
     String color;

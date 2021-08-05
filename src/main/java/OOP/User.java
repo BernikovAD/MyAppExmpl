@@ -1,11 +1,28 @@
 package OOP;
 
 public class User {
-    private String name;
-    private int money;
+
+    String name;
+    protected int money;
+    protected int moneyNew;
+    protected int equio;
+
+    public int getEquio() {
+        return equio;
+    }
+
+    public void setEquio(int equio) {
+        this.equio = equio;
+    }
+
+    static int count = 999;
 
     public String getName() {
         return name;
+    }
+
+    public void moneyplus() {
+        moneyNew = money;
     }
 
     public void setName(String name) {
@@ -16,7 +33,7 @@ public class User {
         return level;
     }
 
-    private int level;
+    protected int level;
 
     public User(String name, int money, int level) {
         this.name = name;
@@ -32,14 +49,16 @@ public class User {
         level += count;
     }
 
-    public void setMoney(int count){
+    public void setMoney(int count) {
         money = money + count;
     }
-    public int getMoney(){
-       return money;
+
+    public int getMoney() {
+        return money;
     }
-    public void getInfo(){
-        System.out.println ("Игрок " + name + " Уровень " + level + " Деньги " + money) ;
+
+    public void getInfo() {
+        System.out.println ("Игрок " + name + " Уровень " + level + " Деньги " + money);
     }
 
 }
