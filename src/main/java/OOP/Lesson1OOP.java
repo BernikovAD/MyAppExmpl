@@ -70,25 +70,65 @@ Object obj = new Object ();*/
         User user2 = new User ("User2",0,1);
         User user3 = new User ("User3",0,1);
 
+/*        System.out.println (User.count);
+        User.count = 10000;
+        System.out.println (User.count);*/
+
+/*        int i = 2;
+        int j = i;
+        System.out.println ("i =" +i + " j = " + j);*/
+        String[] string = new String[6];
+        //User[] users = {user1,user2,user3};
+
+
+        //User user4 = user1;
+/*        user1.getInfo ();
+        user4.getInfo ();*/
+
+        User[] users =new User[3];
+        users[0] = user1;
+        users[1] = user2;
+        users[2] = user3;
+        //users[3] = user4;
 
         equip mech = new equip ("Меч всевластия", 70000);
 
-
-
-        user1.setLevel ();
+        //user1.setLevel ();
         user2.setLevel (10);
         user3.setLevel (3);
+
         user1.setMoney (1000);
         user2.setMoney (77653);
         user3.setMoney (333);
         if(user2.getMoney () >= mech.price){
             user2.setMoney (-mech.price);
             System.out.println ("Игрок " + user2.getName () + " Купил " + mech.vid  + " за " + mech.price);
+            user2.setEquio (1);
         }
 
         user1.setMoney (199999999);
-        user1.getInfo ();
+        if(user1.getMoney () >= mech.price){
+            user2.setMoney (-mech.price);
+            System.out.println ("Игрок " + user1.getName () + " Купил " + mech.vid  + " за " + mech.price);
+            user1.setEquio (1);
+        }
+/*      user1.getInfo ();
         user2.getInfo ();
-        user3.getInfo ();
+        user3.getInfo ();*/
+
+        System.out.println ("Уровень игроков больше 1 ");
+        for (int k = 0; k < users.length; k++) {
+            if(users[k].getEquio () == 1) {
+                System.out.println (" У игрока " + users[k].getName () + " есть экипировка");
+            }
+        }
+
+        UserNew user5 = new UserNew ("user5",0,1);
+        user5.getInfo ();
+/*        for (User user : users) {
+            if (user.getLevel () > 1) {
+                user.getInfo ();
+            }
+        }*/  //Одиннаковые циклы
     }
 }

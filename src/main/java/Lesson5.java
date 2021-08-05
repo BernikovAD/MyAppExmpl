@@ -1,6 +1,8 @@
+import OOP.Cat;
+
 public class Lesson5 {
     public static void main(String[] args) {
-        int x = 1;
+/*        int x = 1;
         String month = "";
         switch (x) {
             case 1:
@@ -43,6 +45,11 @@ public class Lesson5 {
             System.out.println ("IF: x=6");
         }else if (x > 6) {
             System.out.println ("IF: x= " + x);
-        }
+        }*/
+/*        String[] strings = {"sfsdf","sdfsd","asdfdf"};
+        Lesson11.main (strings);*/
+        //Lesson6.main (strings);
+/*        Cat cat1 = new Cat();
+        cat1.name*/
     }
 }
